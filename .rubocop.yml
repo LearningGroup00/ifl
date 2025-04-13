@@ -77,9 +77,6 @@ Style/LambdaCall:
 Lint/NonDeterministicRequireOrder:
   Enabled: true
 
-Custom/SpecFileName:
-  Enabled: true
-
 Rails/WhereEquals:
   Enabled: true
 
