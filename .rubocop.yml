@@ -1,0 +1,117 @@
+require:
+  - ./lib/rubocop/cop/custom/spec_file_name
+plugins:
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - "bundle/**/*"
+    - 'tmp/**/*'
+  DisabledByDefault: true
+  TargetRubyVersion: 3.0
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/IndentationConsistency:
+  Enabled: true
+
+Layout/IndentationStyle:
+  EnforcedStyle: spaces
+  Enabled: true
+
+Layout/EmptyLines:
+  Enabled: true
+
+Layout/TrailingEmptyLines:
+  EnforcedStyle: final_newline
+
+Layout/TrailingWhitespace:
+  Enabled: true
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: True
+  Exclude:
+    - db/
+    - db_core/
+    - db_messaging/
+    - db_archive/
+    - db_datasphere/
+    - .irbrc
+    - .pryrc
+
+# Single quotes being faster is hardly measurable and only affects parse time.
+# Enforcing double quotes reduces the times where you need to change them
+# when introducing an interpolation. Use single quotes only if their semantics
+# are needed.
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  Exclude:
+    - db/schema.rb
+    - db/migrate/*.rb
+    - db_core/schema.rb
+    - db_core/migrate/*.rb
+    - db_messaging/schema.rb
+    - db_messaging/migrate/*.rb
+    - db_archive/schema.rb
+    - db_archive/migrate/*.rb
+    - db_datasphere/schema.rb
+    - db_datasphere/migrate/*.rb
+    - .irbrc
+    - .pryrc
+
+Lint/Debugger:
+  Enabled: true
+
+Style/LambdaCall:
+  Enabled: true
+
+Lint/NonDeterministicRequireOrder:
+  Enabled: true
+
+Custom/SpecFileName:
+  Enabled: true
+
+Rails/WhereEquals:
+  Enabled: true
+
+Rails/FindById:
+  Enabled: true
+
+Rails/FindBy:
+  Enabled: true
+
+Rails/DynamicFindBy:
+  Enabled: false
+
+Rails/WhereNot:
+  Enabled: true
+
+Rails/WhereMissing:
+  Enabled: true
+
+Rails/Pluck:
+  Enabled: true
+
+Rails/Pick:
+  Enabled: true
+
+Rails/PluckId:
+  Enabled: false
+
+Rails/WhereRange:
+  Enabled: true
+  AutoCorrect: false
+
+Rails/SquishedSQLHeredocs:
+  AutoCorrect: false
