@@ -1,5 +1,3 @@
-require:
-  - ./lib/rubocop/cop/custom/spec_file_name
 plugins:
   - rubocop-rails
 
