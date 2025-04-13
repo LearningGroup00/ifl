@@ -4,6 +4,7 @@ plugins:
 AllCops:
   Exclude:
     - "bundle/**/*"
+    - vendor/bundle/**/*
     - 'tmp/**/*'
   DisabledByDefault: true
   TargetRubyVersion: 3.0
