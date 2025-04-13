@@ -53,4 +53,4 @@ jobs:
         run: bundle binstubs rubocop
       # Add or replace any other lints here
       - name: Lint Ruby files
-        run: bin/rubocop --parallel
+        run: bin/rubocop
